@@ -75,6 +75,8 @@ The processor supports the following operations:
    - `Overflow`: Indicates signed overflow.
    - `Carry`: Indicates unsigned overflow.
    ![sch1](https://github.com/user-attachments/assets/7df37fdb-aad6-4f74-9a0b-629f01ffcb9c)
+---
+
 
 
 ![sch2](https://github.com/user-attachments/assets/2bf3b264-c55e-407d-9b04-2a24d82ad684)
@@ -86,8 +88,14 @@ The processor supports the following operations:
    **BRAM Simulation** : 
    ![memSim](https://github.com/user-attachments/assets/97c22477-4d7b-4daf-8190-1052bad97a13)
 
+---
+
+
 
 ![bram](https://github.com/user-attachments/assets/97cabd1a-b76e-4efb-9ec2-bfb86fc8cf12)
+
+---
+
 
 ![bram2](https://github.com/user-attachments/assets/fa588cb4-af78-4455-a96a-ad90bcbefaa8)
 
@@ -151,11 +159,18 @@ hlt              // Halt the program
 **OUTPUT : (overall simplified)**
 ![simplifed](https://github.com/user-attachments/assets/70ed46f4-ebe0-4121-b643-301e6fbedb6e)
 
+---
+
+
 **Flags and Registers (After simulation)**
 
 ![flags_ram](https://github.com/user-attachments/assets/a43e8678-5141-4348-9e23-2250c9b478ff)
 
 - According to the program, all the data have been put onto respective destination registers
+
+---
+
+  
 **Program Memory (Last Instruction)**
 
 ![rom](https://github.com/user-attachments/assets/89af3dcd-b95c-4a4b-bd72-82a733901460)
