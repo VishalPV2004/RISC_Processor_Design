@@ -55,6 +55,8 @@ The processor supports the following operations:
 
 ## File Structure
 
+![Screenshot from 2024-12-31 20-36-34](https://github.com/user-attachments/assets/1203530c-f78d-4ce4-9e3a-c905c5a01ca3)
+
 ### Main Components
 1. **Instruction Register (IR)**:
    - Holds the current instruction being executed.
@@ -72,11 +74,22 @@ The processor supports the following operations:
    - `Zero`: Indicates whether the result is zero.
    - `Overflow`: Indicates signed overflow.
    - `Carry`: Indicates unsigned overflow.
+   ![sch1](https://github.com/user-attachments/assets/7df37fdb-aad6-4f74-9a0b-629f01ffcb9c)
+
+
+![sch2](https://github.com/user-attachments/assets/2bf3b264-c55e-407d-9b04-2a24d82ad684)
 
 5. **BRAM Integration**:
    - The processor uses **Block RAM (BRAM)**, instantiated as an IP core in Vivado.
    - BRAM serves as the instruction memory (`inst_mem`), storing program instructions loaded from `data.mem`.
    - BRAM improves performance by offering low-latency access to instructions during execution.
+   **BRAM Simulation** : 
+   ![memSim](https://github.com/user-attachments/assets/97c22477-4d7b-4daf-8190-1052bad97a13)
+
+
+![bram](https://github.com/user-attachments/assets/97cabd1a-b76e-4efb-9ec2-bfb86fc8cf12)
+
+![bram2](https://github.com/user-attachments/assets/fa588cb4-af78-4455-a96a-ad90bcbefaa8)
 
 ---
 
@@ -96,6 +109,8 @@ The processor supports the following operations:
 
 5. **Result Storage**:
    - Results are stored in GPRs or SGPR, depending on the operation.
+   - ![simplifed](https://github.com/user-attachments/assets/dfc92cb4-3373-4570-babe-ad520e89e4cd)
+
 
 ---
 
@@ -104,6 +119,14 @@ The processor supports the following operations:
 ### Vivado Design Suite
 - The project was developed and synthesized using the **Vivado Design Suite** by Xilinx.
 - **BRAM IP** was instantiated to implement high-performance program memory.
+**Memory with Instruction register :**
+![ir+mem](https://github.com/user-attachments/assets/f5362686-ac2d-47b3-8319-27dc8cf5f911)
+
+**ALU with Instruction register :**
+![LogicalArithmetic](https://github.com/user-attachments/assets/c618bf1f-0a93-449f-97a9-63a6a560f3dc)
+- **TestBench** used to initiate the registers and carry out other operations
+--   **Initialization of all GPRs to 2 :** 
+![init](https://github.com/user-attachments/assets/21364d29-beeb-4020-b0de-7fb8a6ca3666)
 
 ---
 
@@ -123,3 +146,18 @@ jnz r3           // Jump to the loop if r3 is not zero
 
 mov r5, r2       // Move the final result from r2 to r5
 hlt              // Halt the program
+```
+
+**OUTPUT : (overall simplified)**
+![simplifed](https://github.com/user-attachments/assets/70ed46f4-ebe0-4121-b643-301e6fbedb6e)
+
+**Flags and Registers (After simulation)**
+
+![flags_ram](https://github.com/user-attachments/assets/a43e8678-5141-4348-9e23-2250c9b478ff)
+
+- According to the program, all the data have been put onto respective destination registers
+**Program Memory (Last Instruction)**
+
+![rom](https://github.com/user-attachments/assets/89af3dcd-b95c-4a4b-bd72-82a733901460)
+
+
