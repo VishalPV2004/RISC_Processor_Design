@@ -219,7 +219,9 @@ Using the high performance strategy from Vivado, the synthesis focused on achiev
 
 
 
+## Derived Optimization stratergies for various trade offs :
 
+![Image](https://github.com/user-attachments/assets/109da6d2-2247-466e-8714-977fb377de7c)
 
 
 
