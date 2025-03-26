@@ -56,6 +56,7 @@ The processor supports the following operations:
 ## File Structure
 
 ![Screenshot from 2024-12-31 20-36-34](https://github.com/user-attachments/assets/1203530c-f78d-4ce4-9e3a-c905c5a01ca3)
+![Image](https://github.com/user-attachments/assets/d62b8ecb-710f-4d7d-a35a-6dfe8c322748)
 
 ### Main Components
 1. **Instruction Register (IR)**:
