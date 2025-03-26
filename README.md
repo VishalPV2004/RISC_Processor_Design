@@ -175,4 +175,51 @@ hlt              // Halt the program
 
 ![rom](https://github.com/user-attachments/assets/89af3dcd-b95c-4a4b-bd72-82a733901460)
 
+# Optimizations :
+
+## Power Optimization : 
+To achieve power-optimized synthesis, I carefully selected Vivado's synthesis strategies, focusing on reducing dynamic power consumption while maintaining performance. Key steps included:
+
+- Flattening Hierarchy: Set to "rebuilt" in most strategies to optimize logic placement.
+
+- Clock Gating: Ensured gated_clock_conversion was off to prevent unnecessary toggling overhead.
+
+- Fanout Limiting: Capped at 10,000 to balance signal integrity and reduce unnecessary power dissipation.
+
+- Retiming & Resource Sharing: Left unchecked or auto, optimizing trade-offs between power and performance.
+
+- DSP & BRAM Utilization: Kept at auto to allow the tool to distribute resources efficiently for minimal power overhead.
+
+- Before Optimization : 
+![Image](https://github.com/user-attachments/assets/ab1d41d7-af62-4812-8276-0edbde02651b)
+
+- After Optimization :
+![Image](https://github.com/user-attachments/assets/f11a55ee-245a-4d6e-9d02-8bed31f5e8c2)
+
+
+## Timing Optimization :
+
+Using the high performance strategy from Vivado, the synthesis focused on achieving maximum performance while balancing resource utilization. Key observations from the settings:
+
+- Flatten Hierarchy: Set to "rebuilt," allowing better optimization across design modules.
+
+- Fanout Limit: Fixed at 10,000, preventing excessive load on any single net, which helps maintain timing.
+
+- Retiming: Left unchecked, indicating no additional pipeline optimizations were enforced.
+
+- DSP & BRAM Usage: Set to auto, enabling efficient utilization of available hardware blocks.
+
+- Control Set Optimization: Applied automatically to improve timing and area trade-offs.
+
+- Before Optimization :
+![Image](https://github.com/user-attachments/assets/aec45d18-02b9-4caf-bb84-3ce944354321)
+
+- After Optmization :
+![Image](https://github.com/user-attachments/assets/0c6279b9-1cd8-4cfb-8e89-a5c8677bf065)
+
+
+
+
+
+
 
