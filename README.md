@@ -56,12 +56,12 @@ The processor supports the following operations:
 ## File Structure
 
 ![Screenshot from 2024-12-31 20-36-34](https://github.com/user-attachments/assets/1203530c-f78d-4ce4-9e3a-c905c5a01ca3)
-![Image](https://github.com/user-attachments/assets/d62b8ecb-710f-4d7d-a35a-6dfe8c322748)
 
 ### Main Components
 1. **Instruction Register (IR)**:
    - Holds the current instruction being executed.
    - Divided into fields: `oper_type`, `rdst`, `rsrc1`, `imm_mode`, and `isrc`.
+   - ![Image](https://github.com/user-attachments/assets/ef9e7fd8-72a5-4bdf-ab0a-f8f72551f2f1)
 
 2. **General-Purpose Registers (GPRs)**:
    - 32 registers, each 16 bits wide.
@@ -75,7 +75,7 @@ The processor supports the following operations:
    - `Zero`: Indicates whether the result is zero.
    - `Overflow`: Indicates signed overflow.
    - `Carry`: Indicates unsigned overflow.
-   ![sch1](https://github.com/user-attachments/assets/7df37fdb-aad6-4f74-9a0b-629f01ffcb9c)
+   - ![sch1](https://github.com/user-attachments/assets/7df37fdb-aad6-4f74-9a0b-629f01ffcb9c)
 ---
 
 
@@ -87,18 +87,18 @@ The processor supports the following operations:
    - BRAM serves as the instruction memory (`inst_mem`), storing program instructions loaded from `data.mem`.
    - BRAM improves performance by offering low-latency access to instructions during execution.
    **BRAM Simulation** : 
-   ![memSim](https://github.com/user-attachments/assets/97c22477-4d7b-4daf-8190-1052bad97a13)
+   - ![memSim](https://github.com/user-attachments/assets/97c22477-4d7b-4daf-8190-1052bad97a13)
 
 ---
 
 
 
-![bram](https://github.com/user-attachments/assets/97cabd1a-b76e-4efb-9ec2-bfb86fc8cf12)
+- ![bram](https://github.com/user-attachments/assets/97cabd1a-b76e-4efb-9ec2-bfb86fc8cf12)
 
 ---
 
 
-![bram2](https://github.com/user-attachments/assets/fa588cb4-af78-4455-a96a-ad90bcbefaa8)
+- ![bram2](https://github.com/user-attachments/assets/fa588cb4-af78-4455-a96a-ad90bcbefaa8)
 
 ---
 
@@ -119,6 +119,8 @@ The processor supports the following operations:
 5. **Result Storage**:
    - Results are stored in GPRs or SGPR, depending on the operation.
    - ![simplifed](https://github.com/user-attachments/assets/dfc92cb4-3373-4570-babe-ad520e89e4cd)
+
+![Image](https://github.com/user-attachments/assets/d62b8ecb-710f-4d7d-a35a-6dfe8c322748)
 
 
 ---
